@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "chimero"
-  spec.version       = "1.1.2"
-  spec.authors       = ["Jacopo Donati"]
-  spec.email         = ["33698919+jacopodonati@users.noreply.github.com"]
+  spec.name     = "chimero"
+  spec.version  = "1.1.3"
+  spec.authors  = ["Jacopo Donati"]
+  spec.email    = ["33698919+jacopodonati@users.noreply.github.com"]
 
-  spec.summary       = "A theme based on Frank Chimero's website."
-  spec.homepage      = "http://jacopodonati.it"
-  spec.license       = "MIT"
+  spec.summary  = "A theme based on Frank Chimero's website."
+  spec.homepage = "http://jacopodonati.it"
+  spec.license  = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
+  spec.files    = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.9"
 
