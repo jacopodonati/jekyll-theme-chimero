@@ -6,7 +6,7 @@
             {%- for recensione in recensioni limit: 4%}
                 <li>
                     <a href="{{ recensione.url }}">
-                        <img src="/img/movies/{{ recensione.imdb }}.jpg" alt="Poster di {{ recensione.title }} ({{ recensione.year }})" class="poster">
+                        <img src="/assets/img/movies/{{ recensione.imdb }}.jpg" alt="Poster di {{ recensione.title }} ({{ recensione.year }})" class="poster">
                         <div class="legend">
                             <span class="title">{{ recensione.title }}</span>
                             <span class="year">({{ recensione.year }})</span>
