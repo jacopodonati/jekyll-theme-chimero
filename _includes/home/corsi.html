@@ -1,14 +1,12 @@
         <section id="corsi">
-        {% assign corsi = site["corsi"] %}
+        {% assign corsi = site["corsi"] | where: "show", true %}
         {%- if corsi.size > 0 %}
             <h2>I prossimi corsi</h2>
             <ul id="elenco-datato">
             {%- for corso in corsi %}
-            {%- if corso.show %}
                 <li>
-                    <a href="{{ corso.url }}">{{ title }}</a>
+                    <a href="{{ corso.url }}">{{ corso.title }}</a>
                 </li>
-            {%- endif %}
             {%- endfor %}
             </ul>
         {%- endif %}
