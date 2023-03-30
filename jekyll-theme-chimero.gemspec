@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name     = "chimero"
-  spec.version  = "1.2.4"
+  spec.version  = "1.2.5"
   spec.authors  = ["Jacopo Donati"]
   spec.email    = ["33698919+jacopodonati@users.noreply.github.com"]
 
