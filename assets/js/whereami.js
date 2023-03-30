@@ -1,39 +1,41 @@
 ---
 ---
 window.addEventListener('load', function () {
-    var locations_list = JSON.parse('{{ site.data.locations | jsonify }}');
-    var current_date = new Date();
-    var day_length = 1000 * 60 * 60 * 24;
-    var current_location;
-    var next_location;
-    var next_location_date;
+    const locationsList = JSON.parse('{{ site.data.locations | jsonify }}');
+    const dayLength = 1000 * 60 * 60 * 24;
+    const currentDate = new Date();
+    const limitDate = new Date();
+    limitDate.setDate(limitDate.getDate() + 14);
+    var currentLocation;
+    var nextLocation;
+    var nextLocationDate;
     
     var i = 0;
     do {
-        let location = locations_list[i];
-        let location_date = new Date(location.date);
-        if (current_date < location_date) {
-            next_location = location;
-            next_location_date = location_date;
+        let location = locationsList[i];
+        let locationDate = new Date(location.date);
+        if (currentDate < locationDate && locationDate <= limitDate) {
+            nextLocation = location;
+            nextLocationDate = locationDate;
             break;
         } else {
-            current_location = location;
+            currentLocation = location;
             i++;
         }
-        if (i == locations_list.length) { break; }
-    } while (next_location == null);
+        if (i == locationsList.length) { break; }
+    } while (nextLocation == null);
 
-    document.querySelector('#current_location').textContent = current_location.label;
+    document.querySelector('#current_location').textContent = currentLocation.label;
 
-    if (next_location != null) {
-        let days = Math.round(Math.abs(current_date - next_location_date) / day_length);
+    if (nextLocation != null) {
+        let days = Math.round(Math.abs(currentDate - nextLocationDate) / dayLength);
         document.querySelector('#freccia').classList.remove('nascosto');
-        document.querySelector('#next_location').textContent = next_location.label;
+        document.querySelector('#next_location').textContent = nextLocation.label;
         if (days != 1) {
             document.querySelector('#when_next_location').textContent = `(tra ${days} giorni)`;
         } else {
             document.querySelector('#when_next_location').textContent = `(tra ${days} giorno)`;
         }
-        document.querySelector('#when_next_location').textContent = `(tra ${Math.round(Math.abs(current_date - next_location_date) / day_length)} giorni)`;
+        document.querySelector('#when_next_location').textContent = `(tra ${Math.round(Math.abs(currentDate - nextLocationDate) / dayLength)} giorni)`;
     }
 }, false);
