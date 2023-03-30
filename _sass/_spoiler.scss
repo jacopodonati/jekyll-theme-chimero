@@ -3,6 +3,9 @@
         display: flex;
         justify-content: space-between;
         padding: 0;
+        flex-wrap: wrap;
+        column-gap: .4rem;
+        row-gap: .4rem;
 
         li {
             text-align: center;
@@ -18,7 +21,8 @@
                 }
 
                 .legend {
-                    padding: .4rem;
+                    width: 8rem;
+                    padding-top: .4rem;
                     text-align: center;
                     font-size: .8rem;
 
