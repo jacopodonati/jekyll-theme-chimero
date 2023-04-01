@@ -3,8 +3,8 @@
     <meta name="title" content="{{ site.title }}">
     <meta name="description" content="{{ site.description }}">
 {%- else %}
-    <title>{{ page.title }} · {{ site.title }}</title>
-    <meta name="title" content="{{ page.title | capitalize }} · {{ site.title }}">
+    <title>{{ page.title | capitalize }} · {{ site.title }}</title>
+    <meta name="title" content="{{ page.title | capitalize }} su {{ site.title }}">
     <meta name="description" content="{{ page.description }}">
     {%- endif %}
     <meta name="author" content="Jacopo Donati">
