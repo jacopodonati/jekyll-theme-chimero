@@ -4,7 +4,7 @@
     <meta name="description" content="{{ site.description }}">
 {%- else %}
     <title>{{ page.title }} · {{ site.title }}</title>
-    <meta name="title" content="{{ page.title }} · {{ site.title }}">
+    <meta name="title" content="{{ page.title | capitalize }} · {{ site.title }}">
     <meta name="description" content="{{ page.description }}">
     {%- endif %}
     <meta name="author" content="Jacopo Donati">
