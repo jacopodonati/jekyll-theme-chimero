@@ -14,10 +14,10 @@
         margin: 0 auto;
 
         .quote {
-            background-color: $content_color;
+            background-color: var(--content-color);
             box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             border-radius: 1px;
-            font-family: $serif_fonts;
+            font-family: var(--serif-fonts);
             font-size: 1.2rem;
             margin-bottom: 1rem;
             padding: 2rem;
@@ -55,7 +55,7 @@
 }
 
 article.manuale {
-    background-color: $content_color;
+    background-color: var(--content-color);
     border: 1px solid black;
     padding: 1rem;
     box-shadow: 2px 2px 0px #ddd;
@@ -76,13 +76,13 @@ article.manuale {
 
 .scheda {
     article {
-        background-color: $content_color;
+        background-color: var(--content-color);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        font-family: $serif_fonts;
+        font-family: var(--base-fonts);
         font-size: 2rem;
         margin: 0 auto;
         padding: 2rem 4rem;
-        max-width: $max_width;
+        max-width: var(--max-width);
 
         p {
             hyphens: none;
@@ -110,5 +110,3 @@ article.manuale {
         }
     }
 }
-
-@import "manuale_dark";

@@ -18,7 +18,7 @@
     }
 
     #location {
-        color: $label_color;
+        color: var(--label-color);
 
         #freccia {
             padding: 0 .4rem;
@@ -32,5 +32,3 @@
         }
     }
 }
-
-@import "header_dark";

@@ -1,13 +1,13 @@
 body {
-    background-color: $background_color;
-    color: $text_color;
-    font-family: $base_fonts, $emoji_fonts;
-    font-size: $font_size;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--base-fonts);
+    font-size: var(--font-size);
     line-height: 1.5;
 }
 
 #home-header, #content > section, #home-footer {
-    max-width: $max_width;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -20,22 +20,22 @@ body {
 }
 
 a {
-    color: $link;
+    color: var(--link);
     transition: .4s;
 
     &:visited {
         transition: .4s;
-        color: $link;
+        color: var(--link);
     }
 
     &:hover {
         transition: .4s;
-        color: $link_hover;
+        color: var(--link-hover);
     }
 
     &:active {
         transition: .4s;
-        color: $link_active;
+        color: var(--link-active);
     }
 }
 
@@ -94,30 +94,9 @@ blockquote {
     margin-bottom: .8em;
     
     .label {
-        color: $label_color;
+        color: var(--label-color);
         font-weight: 500;
     }
-    
-    /* VECCHI STILI PER I PROGETTI A FONDO PAGINA
-    .year {
-        color: adjust-color($color: $text_color, $lightness: 40%);
-        font-size: .8rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
-    .project {
-        h3 {
-            font-size: 1rem;
-            font-weight: 500;
-            margin: 1rem 0 .4rem 0;
-        }
-
-        .description {
-            color: adjust-color($color: $text_color, $lightness: 20%);
-        }
-    }
-    VECCHI STILI PER I PROGETTI A FONDO PAGINA */
 }
 
 #altro {

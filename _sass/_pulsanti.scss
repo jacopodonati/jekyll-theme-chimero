@@ -26,4 +26,8 @@
     fill: #000000;
 }
 
-@import "pulsanti_dark";
+@media (prefers-color-scheme: dark) {    
+    .amazon .scritta, .ibsit .ibs, .lafeltrinelli, .pendragon {
+        fill: var(--text-color);
+    }
+}

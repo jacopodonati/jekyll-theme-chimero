@@ -5,7 +5,11 @@
         justify-content: center;
         align-content: center;
         gap: 2rem;
-    
+        
+        .linea {
+            fill: var(--text-color);
+        }
+
         .hex-design {
             max-width: 10rem;
             
@@ -49,18 +53,18 @@
                 align-items: center;
 
                 &:disabled {
-                    background-color: palegoldenrod;
+                    background-color: peru;
                 }
 
                 svg {
                     width: 4rem;
 
                     .yin, .yang {
-                        fill: $button_text;
+                        fill: var(--button-text);
                     }
 
                     .modificatore {
-                        fill: mix($button_text, $button_background, $weight: 50%) 
+                        fill: #baaba4; 
                     }
                 }
             }
@@ -68,11 +72,11 @@
     }
 
     #hex-text {
-        background-color: $content_color;
+        background-color: var(--content-color);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         margin: 2rem auto;
         padding: 2rem 4rem;
-        max-width: $max_width;
+        max-width: var(--max-width);
 
         #hex-header {
             column-gap: 1rem;
@@ -116,7 +120,7 @@
 
         #hex-lines {
             padding-top: 2rem;
-            border-top: 1px solid $button_background;
+            border-top: 1px solid var(--button-background);
             margin-top: 2rem;
 
             .line {
@@ -144,4 +148,8 @@
     }
 }
 
-@import "i-ching_dark";
+@media (prefers-color-scheme: dark) {
+    .i-ching .selector .button svg .modificatore {
+        fill: #918b88;
+    }
+}
