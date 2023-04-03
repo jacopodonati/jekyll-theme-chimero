@@ -7,6 +7,11 @@
 {%- endif %}
 </head>
 <body>
+{% if page.print_title != nil %}
+    <h1 class="for-print">{{ page.print_title }}</h1>
+{% else %}
+    <h1 class="for-print">{{ page.title }}</h1>
+{% endif %}
 {% include header.html %}
     <main id="content" class="{{ page.layout }} {{ page.class }} {{ page.category }}">
 {{- content }}

@@ -13,8 +13,20 @@ body {
     }
 }
 
-footer, #home-footer {
-    margin-top: 0;
+nav {
+    display: none;
+}
+
+#home-footer {
+    display: none;
+}
+
+.tag-selector {
+    display: none;
+}
+
+.for-print {
+    display: initial;
 }
 
 .back {
