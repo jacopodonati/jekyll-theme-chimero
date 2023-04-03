@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="book">
-    <img src="/assets/img/books/{{ page.isbn }}.jpg" alt="{{ page.title }}" class="book-cover">
+    {% picture book_cover books/{{ page.isbn }}.jpg --alt {{ page.title }} %}
     <div class="description">
         <h1 class="title">{{ page.title }}</h1>
         <ul class="stores">
